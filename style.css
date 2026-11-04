@@ -9,3 +9,35 @@ body:has(#collection) .profile>img{border-color:#202224;outline-color:#4c5545}
 body:has(#collection) input{background:#191b1d;color:var(--ink)}
 body:has(#collection) .filters button.active{color:#121510}
 body:has(#collection) dialog{border:1px solid var(--line)}
+
+/* Full-screen image showcase */
+body:has(#collection){--paper:#0d0e10;--line:#2b2c2f}
+body:has(#collection)>header{position:absolute;z-index:5;top:0;left:0;max-width:none;width:100%;height:100px;padding:0 5vw;background:linear-gradient(#0008,transparent);color:#fff}
+body:has(#collection)>header .brand{font-style:italic;font-weight:bold}
+body:has(#collection)>main{max-width:none;padding:0}
+.header-actions{display:flex;align-items:center;gap:30px}
+#menuOpen{border:0;border-radius:0;font-size:23px;padding:8px;background:none;color:#fff}
+body:has(#collection) .stage{height:100svh;min-height:600px;width:100%;border:0;border-radius:0;padding:0;background:#111;isolation:isolate}
+.stage .hero-image{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center 42%;filter:grayscale(1) brightness(.58);z-index:-3}
+.stage .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#050609b8,transparent 75%),linear-gradient(0deg,#0d0e10d9,transparent 42%);z-index:-2}
+body:has(#collection) .stage:after{display:none}
+.stage .hero-kicker{position:absolute;left:5vw;top:145px;letter-spacing:3px;font-size:10px}
+.stage .hero-title{position:absolute;left:12vw;top:50%;transform:translateY(-42%)}
+.stage .hero-title .eyebrow{color:#e0e0db;letter-spacing:4px;font-size:10px}
+.stage .hero-title p{font:bold clamp(80px,12vw,190px)/.81 Georgia,serif;margin:24px 0 35px;letter-spacing:-.07em;color:white}
+.stage .hero-title em{font:italic 1em/.81 Georgia,serif;color:#d2e4b9}
+.stage .hero-title>a{display:inline-block;font-size:12px;letter-spacing:1px;border-bottom:1px solid #ffffff80;padding-bottom:8px}
+.stage .hero-prev,.stage .hero-next{position:absolute;top:50%;border:0;border-radius:0;padding:15px 0;background:transparent;color:white;font-size:10px;letter-spacing:1px}
+.stage .hero-prev{left:4vw}.stage .hero-next{right:4vw}
+.stage .hero-scroll{position:absolute;bottom:42px;left:5vw;font-size:27px}.hero-scroll span{font-size:8px;letter-spacing:2px;margin-left:12px}
+.stage .hero-index{position:absolute;left:50%;transform:translateX(-50%);bottom:46px;text-align:center;font-size:9px;letter-spacing:1px;max-width:35%;color:#e6e6e0}
+.stage small{bottom:48px;right:5vw;font-size:8px;letter-spacing:1px}
+body:has(#collection) .profile,body:has(#collection) main>nav,body:has(#collection) #collection,body:has(#collection) main>footer{max-width:1200px;width:calc(100% - 10vw);margin-left:auto;margin-right:auto}
+body:has(#collection) .profile{padding:65px 0 45px}
+body:has(#collection) #collection{padding-top:15px;scroll-margin-top:25px}
+body:has(#collection) main>footer{margin-top:65px}
+#fullMenu{width:100vw;max-width:100vw;height:100svh;max-height:100svh;margin:0;border:0;border-radius:0;padding:35px 5vw;background:#0b0c0e;color:#f6f6f4}
+#fullMenu::backdrop{background:#0b0c0e}
+.menu-top{display:flex;align-items:center;justify-content:space-between}.menu-top .brand{font:italic bold 23px Georgia,serif}.menu-top button{border:0;font-size:20px;color:#fff}
+#menuTitle{margin-top:70px;color:#92938f}.menu-columns{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;margin-top:35px}.menu-columns h3{font-size:28px;border-bottom:1px solid #343536;padding-bottom:20px;margin:0 0 25px}.menu-columns a{font-size:13px;color:#bdbfbc}.menu-columns a:hover{color:#d2e4b9}.menu-bottom{position:absolute;bottom:45px;left:5vw;right:5vw;border-top:1px solid #343536;padding-top:25px;font-size:16px}.menu-bottom span{float:right;font-size:9px;color:#999;letter-spacing:2px}
+@media(max-width:760px){body:has(#collection)>header{height:78px;padding:0 6vw}.header-actions{gap:12px}.brand small{display:none}.stage .hero-kicker{top:115px;left:7vw;font-size:8px}.stage .hero-title{left:13vw;top:49%}.stage .hero-title p{font-size:clamp(76px,19vw,145px);margin:22px 0 28px}.stage .hero-title .eyebrow{font-size:8px;letter-spacing:2px}.stage .hero-image{object-position:58% center}.stage .hero-prev,.stage .hero-next{top:72%;font-size:9px}.stage .hero-prev{left:7vw}.stage .hero-next{right:7vw}.stage .hero-scroll{bottom:30px;left:7vw}.hero-scroll span{display:none}.stage .hero-index{bottom:40px;max-width:60%;font-size:8px}.stage small{display:none}body:has(#collection) .profile{padding:35px 0}.menu-columns{grid-template-columns:1fr 1fr;gap:40px 25px}.menu-columns h3{font-size:21px;margin-bottom:14px;padding-bottom:12px}.menu-columns a{font-size:11px}#menuTitle{margin-top:60px}.menu-bottom span{display:block;float:none;margin-top:8px}}
